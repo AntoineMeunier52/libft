@@ -6,7 +6,10 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
 					ft_toupper.c ft_calloc.c  ft_isdigit.c ft_memchr.c  ft_memset.c  \
 					ft_putstr_fd.c  ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_itoa_base.c \
 					ft_numlen_base.c ft_numlen.c ft_uitoa.c ft_putnbr_base.c ft_putchar.c \
-					ft_putnbr.c
+					ft_putnbr.c ./ft_printf/ft_format.c ./ft_printf/ft_print_char.c \
+					./ft_printf/ft_print_hexa.c ./ft_printf/ft_print_int.c \
+					./ft_printf/ft_print_pour.c ./ft_printf/ft_print_ptn.c \
+					./ft_printf/ft_print_string.c ./ft_printf/ft_print_uns.c ./ft_printf/ft_printf.c
 OBJS			= $(SRCS:.c=.o)
 
 BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \

@@ -16,12 +16,20 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <stdarg.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct s_printl
+{
+	va_list	args;
+	int		tlen;
+}				t_printl;
 
 void	*ft_memset(void *pointer, int value, size_t count);
 void	ft_bzero(void *s, size_t n);
@@ -73,5 +81,14 @@ char	*ft_uitoa(unsigned int nb);
 int		ft_putnbr_base(unsigned long n, char *base);
 int		ft_putchar(char c);
 int		ft_putnbr(int nb);
+int		ft_printf(const char *format, ...);
+int		ft_read_conversion(t_printl *tab, const char *format, int i);
+void	ft_print_char(t_printl *tab);
+void	ft_print_string(t_printl *tab);
+void	ft_print_ptn(t_printl *tab);
+void	ft_print_num(t_printl *tab);
+void	ft_print_uns_num(t_printl *tab);
+void	ft_print_hexa(t_printl *tab, int c);
+void	ft_print_pour(t_printl *tab);
 
 #endif
